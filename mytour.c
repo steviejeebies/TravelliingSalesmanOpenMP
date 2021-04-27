@@ -6,12 +6,8 @@ typedef struct {
     int cityNum;
 } pointUpgrade;
 
-void my_tour(const point cities[], int tour[], int numCities) {
-
-    // Stephen Rowe ID 14319662
-    // Oisin Tong
-    
-    // Here are some results we got from Stoker.
+void my_tour(const point cities[], int tour[], int numCities) {    
+    // Here are some results we got from TCD Stoker Machine:
     // NumCity  Time
     // 100      429 microseconds
     // 200      1,111 microseconds
@@ -21,7 +17,7 @@ void my_tour(const point cities[], int tour[], int numCities) {
     // 1000	    18,638 microseconds
 
     // 2000	    64,916 microseconds
-    // 4000	    156,269 microseconds to  247,674 microseconds (these varied, could have been someone else using the machine at the same time)
+    // 4000	    156,269 microseconds to  247,674 microseconds
     // 6000	    256,602 microseconds to 546,109 microseconds
     // 8000	    453,888 microseconds to 885,907 microseconds
     // 10,000	799,198 microseconds
@@ -35,11 +31,6 @@ void my_tour(const point cities[], int tour[], int numCities) {
 
     // The sweet spot on Stoker for enabling OpenMP was 26500. If
     // we enabled it for any lower than that, I got a time penalty.
-    // !!! NOTE TO OISIN: When you're experimenting with scheduling for
-    // the for-loops in this program, make sure to test if this value
-    // needs to be updated. Turn OpenMP off entirely, time it, turn OpenMP
-    // on constantly, time it, and rinse and repeat until you find the
-    // sweet spot. Also, compare against the current version of this file.
 
     int OPEN_MP_ENABLED = (numCities > 26500) ? 1 : 0;
     int ClosePt;            // used to keep track of which city we're currently at, and a connected (close) city
