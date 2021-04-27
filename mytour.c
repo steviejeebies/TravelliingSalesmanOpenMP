@@ -31,7 +31,7 @@ void my_tour(const point cities[], int tour[], int numCities) {
     // 500,000  150,432,012 microseconds (only tested this once)
 
     // The sweet spot on Stoker for enabling OpenMP was 26500. If
-    // we enabled it for any lower than that, I got a time penalty.
+    // I enabled it for any lower than that, I got a time penalty.
 
     int OPEN_MP_ENABLED = (numCities > 26500) ? 1 : 0;
     int ClosePt;            // used to keep track of which city we're currently at, and a connected (close) city
