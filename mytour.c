@@ -16,17 +16,18 @@ void my_tour(const point cities[], int tour[], int numCities) {
     // 800	    12,978 microseconds
     // 1000	    18,638 microseconds
 
-    // 2000	    64,916 microseconds
-    // 4000	    156,269 microseconds to  247,674 microseconds
-    // 6000	    256,602 microseconds to 546,109 microseconds
-    // 8000	    453,888 microseconds to 885,907 microseconds
-    // 10,000	799,198 microseconds
+    // 2000     64,916 microseconds
+    // 4000     156,269 microseconds to  247,674 microseconds
+    // 6000     256,602 microseconds to 546,109 microseconds
+    // 8000     453,888 microseconds to 885,907 microseconds
+    // 10,000   799,198 microseconds
 
     // 20,000	3,084,231 microseconds
-    // 40,000	7.844.667 microseconds
+    // 40,000	7,844,667 microseconds
     // 60,000	12,052,361 microseconds
     // 80,000	15,875,835 microseconds
     // 100,000	21,137,093 microseconds  (tested twice)
+    // ...
     // 500,000  150,432,012 microseconds (only tested this once)
 
     // The sweet spot on Stoker for enabling OpenMP was 26500. If
