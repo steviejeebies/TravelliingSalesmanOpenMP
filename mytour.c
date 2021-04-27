@@ -11,10 +11,10 @@ void my_tour(const point cities[], int tour[], int numCities) {
     // NumCity  Time
     // 100      429 microseconds
     // 200      1,111 microseconds
-    // 400	    4,658 microseconds
-    // 600	    6,927 microseconds
-    // 800	    12,978 microseconds
-    // 1000	    18,638 microseconds
+    // 400      4,658 microseconds
+    // 600      6,927 microseconds
+    // 800      12,978 microseconds
+    // 1000     18,638 microseconds
 
     // 2000     64,916 microseconds
     // 4000     156,269 microseconds to  247,674 microseconds
