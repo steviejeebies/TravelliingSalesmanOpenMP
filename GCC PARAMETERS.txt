@@ -1,0 +1,46 @@
+#!/bin/sh
+gcc -o ts.exe mytour.c sales.c -fopenmp -march=native -lm
+gcc -o ts_no_dist_check.exe mytour_no_dist_check.c sales.c -fopenmp -march=native -lm
+
+NUM_CITIES=200
+echo $NUM_CITIES
+./ts.exe $NUM_CITIES
+NUM_CITIES=500
+echo $NUM_CITIES
+./ts.exe $NUM_CITIES
+NUM_CITIES=1000
+echo $NUM_CITIES
+./ts.exe $NUM_CITIES
+NUM_CITIES=2500
+echo $NUM_CITIES
+./ts.exe $NUM_CITIES
+NUM_CITIES=5000
+echo $NUM_CITIES
+./ts.exe $NUM_CITIES
+NUM_CITIES=10000
+echo $NUM_CITIES
+./ts.exe $NUM_CITIES
+NUM_CITIES=20000
+echo $NUM_CITIES
+./ts.exe $NUM_CITIES
+NUM_CITIES=25000
+echo $NUM_CITIES
+./ts.exe $NUM_CITIES
+NUM_CITIES=30000
+echo $NUM_CITIES
+./ts.exe $NUM_CITIES
+NUM_CITIES=40000
+echo $NUM_CITIES
+./ts.exe $NUM_CITIES
+#NUM_CITIES=50000
+#echo $NUM_CITIES
+#./ts.exe $NUM_CITIES
+#NUM_CITIES=75000
+#echo $NUM_CITIES
+#./ts.exe $NUM_CITIES
+#NUM_CITIES=100000
+#echo $NUM_CITIES
+#./ts.exe $NUM_CITIES
+#NUM_CITIES=500000
+#echo $NUM_CITIES
+#./ts.exe $NUM_CITIES
